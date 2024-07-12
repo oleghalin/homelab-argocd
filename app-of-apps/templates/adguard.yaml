@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: adguard
+  name: pihole
   namespace: argo-cd
 spec:
   project: default
   source:
-    chart: adguard-home
-    repoURL: https://helm-charts.rm3l.org
-    targetRevision: "0.17"
+    chart: pihole
+    repoURL: https://mojo2600.github.io/pihole-kubernetes
+    targetRevision: "2.24"
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: adguard
+    namespace: pihole
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
