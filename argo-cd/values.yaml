@@ -3,23 +3,23 @@ global:
 
 argo-cd:
   redis-ha:
-  enabled: true
-
-controller:
-  replicas: 1
-
-server:
-  replicas: 2
-
-repoServer:
-  replicas: 2
-
-applicationSet:
-  replicas: 2
-
-certificate:
-  enabled: true
-
-server:
-  ingress:
     enabled: true
+
+  controller:
+    replicas: 1
+
+  server:
+    replicas: 2
+
+  repoServer:
+    replicas: 2
+
+  applicationSet:
+    replicas: 2
+
+  certificate:
+    enabled: true
+
+  server:
+    ingress:
+      enabled: true
