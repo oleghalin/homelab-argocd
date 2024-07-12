@@ -8,7 +8,7 @@ spec:
   source:
     chart: adguard-home
     repoURL: https://helm-charts.rm3l.org
-    targetRevision: 0.17
+    targetRevision: "0.17"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: adguard
