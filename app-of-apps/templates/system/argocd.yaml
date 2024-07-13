@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aro-cd
+  namespace: argo-cd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/oleghalin/homelab-argocd.git
+    targetRevision: HEAD
+    path: argo-cd
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: argo-cd
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
