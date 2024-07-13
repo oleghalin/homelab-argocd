@@ -2,6 +2,9 @@ global:
   domain: argocd.khalin.local
 
 argo-cd:
+  configs:
+    params:
+      server.insecure: true
   redis-ha:
     enabled: true
 
