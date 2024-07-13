@@ -15,13 +15,13 @@ spec:
           enabled: true
 
         serviceWeb:
-          loadBalancerIP: 192.168.178.252
+          loadBalancerIP: 10.0.0.61
           annotations:
             metallb.universe.tf/allow-shared-ip: pihole-svc
           type: LoadBalancer
 
         serviceDns:
-          loadBalancerIP: 192.168.178.252
+          loadBalancerIP: 10.0.0.61
           annotations:
             metallb.universe.tf/allow-shared-ip: pihole-svc
           type: LoadBalancer
