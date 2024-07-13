@@ -24,3 +24,5 @@ argo-cd:
     ingress:
       enabled: true
       tls: true
+      annotations:
+        cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
