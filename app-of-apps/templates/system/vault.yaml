@@ -24,6 +24,7 @@ spec:
               - host: vault.khalin.local
                 paths: []
           ha:
+            enabled: true
             raft:
               enabled: true
   destination:
