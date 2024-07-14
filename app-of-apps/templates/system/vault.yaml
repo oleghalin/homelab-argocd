@@ -9,6 +9,23 @@ spec:
     chart: vault
     repoURL: https://helm.releases.hashicorp.com
     targetRevision: "0.28.1"
+    helm:
+      values: |
+        server:
+          ingress:
+            enabled: true
+            annotations:
+              cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
+            tls:
+              secretName: vault-tls
+              hosts:
+                - vault.khalin.local
+            hosts:
+              - host: vault.khalin.local
+                paths: []
+          ha:
+            raft:
+              enabled: true
   destination:
     server: "https://kubernetes.default.svc"
     namespace: vault
