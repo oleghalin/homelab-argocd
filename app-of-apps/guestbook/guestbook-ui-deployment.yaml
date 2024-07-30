@@ -10,12 +10,10 @@ spec:
   selector:
     matchLabels:
       app: guestbook-ui
-      foo: bar
   template:
     metadata:
       labels:
         app: guestbook-ui
-        foo: bar
     spec:
       containers:
       - image: quay.io/argoprojlabs/argocd-e2e-container:0.2
