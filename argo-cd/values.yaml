@@ -5,20 +5,9 @@ argo-cd:
   configs:
     params:
       server.insecure: true
-  redis-ha:
-    enabled: true
 
-  controller:
-    replicas: 1
-
-  server:
-    replicas: 2
-
-  repoServer:
-    replicas: 2
-
-  applicationSet:
-    replicas: 2
+  notifications:
+    enabled: false
 
   certificate:
     enabled: true
@@ -26,6 +15,3 @@ argo-cd:
   server:
     ingress:
       enabled: true
-      tls: true
-      annotations:
-        cert-manager.io/cluster-issuer: selfsigned-cluster-issuer
